@@ -2,7 +2,7 @@ import socket
 
 from network_layer import *
 from view import View
-import time
+from internet_layer import *
 
 def main():
     interface = View()
@@ -16,7 +16,6 @@ def main():
         if prototype == 8:
             ip_data = get_ipc4_packets(data)
             context = format_output((dest_mac, src_mac, prototype), ip_data)
-            print(context)
             interface.add_trafic_record(context)
 
         interface.update()
