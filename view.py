@@ -26,6 +26,6 @@ class View:
         self.textarea.insert(END, record)
         self.textarea.see(END)
 
-    def update(self):
+    def update_view(self):
         self.view.update()
 
