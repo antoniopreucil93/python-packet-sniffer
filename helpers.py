@@ -1,6 +1,5 @@
 
 def format_output(payload):
-    print(payload)
     dest_mac, src_mac, _ = payload["ethernet_data"]
     ttl, _, src_ip_addres, dest_ip_address = payload["internet_data"]
     icmp_type = payload["icmp_data"]
