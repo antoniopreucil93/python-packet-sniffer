@@ -14,8 +14,8 @@ def get_ipc4_packets(raw_data):
     )
 
 def get_icmp_packet(raw_data):
-    icmp_type, code, checksum = struct.unpack('! B B H', raw_data[:4])
-    return icmp_type, code, checksum, raw_data[4:]
+    icmp_type = struct.unpack('! B B H', raw_data[:4])
+    return icmp_type, raw_data[4:]
 
 
 def format_ip_addres(data):

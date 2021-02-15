@@ -12,9 +12,3 @@ def get_ethernet_frame_payload(raw_data):
 
 def format_mac_address(bytes_address):
     return ':'.join('{:02x}'.format(byte) for byte in bytes_address).upper()
-
-
-def format_output(ethernet_data, network_data):
-    dest_mac, src_mac, prototype = ethernet_data
-    ttl, src_ip_addres, dest_ip_address = network_data
-    return f"""Ethernet Layer: Source Mac Address: {src_mac}, Destination Mac Address: {dest_mac}, Prototype: {prototype}\nNetwork Layer: Source IP Address: {src_ip_addres}, Destination IP Address: {dest_ip_address}, TTL: {ttl}\n\n"""
